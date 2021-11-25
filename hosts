@@ -1,0 +1,5 @@
+[test] 
+client-1 ansible_host=192.168.0.163 ansible_user=client-1
+client-2 ansible_host=192.168.0.135 ansible_user=client-2
+[group:children]
+test

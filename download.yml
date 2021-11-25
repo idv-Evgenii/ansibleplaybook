@@ -1,0 +1,15 @@
+---
+- name: download package
+  hosts: all
+  become: yes
+  vars:
+    pakages:
+      - net-tools
+      - htop
+      - tree
+      - rsync
+  tasks:
+    - name: download
+      apt:
+        pkg: "{{pakages}}"
+        state: present
